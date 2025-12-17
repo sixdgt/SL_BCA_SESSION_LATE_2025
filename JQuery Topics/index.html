@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Image Hide & Show</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <section class="container">
+        <div class="card">
+            <button class="btn btn-primary btn-sm mb-3" id="toggleButton">Toggle Image</button>
+            <button class="btn btn-info btn-sm mb-3" id="showButton">Show Image</button>
+            <button class="btn btn-secondary btn-sm mb-3" id="hideButton">Hide Image</button>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <img src="rajesh_hamal.png" alt="Rajesh Hamal" 
+                class="img-fluid img-thumbnail" 
+                id="image" style="display: none;"
+                width="300" height="600">
+            </div>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#toggleButton").click(function(){
+                $("#image").toggle("fast");
+            });
+
+            $("#hideButton").click(function(){
+                $("#image").hide("slow");
+            });
+
+            $("#showButton").click(function(){
+                $("#image").show("fast");
+            });
+        });
+    </script>
+</body>
+</html>
